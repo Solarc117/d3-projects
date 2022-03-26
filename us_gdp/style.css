@@ -1,0 +1,112 @@
+:root {
+  --dark-background: hsl(0, 0%, 20%);
+  --light-background: hsl(0, 0%, 95%);
+
+  --light: hsl(33, 100%, 75%);
+  --light-hover: hsl(54, 77%, 90%);
+
+  --dark: hsl(182, 25%, 40%);
+  --dark-hover: hsl(240, 40%, 85%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body.dark {
+  background: var(--dark-background);
+  color: var(--light);
+}
+body.dark a {
+  color: var(--dark);
+}
+body.light {
+  background: var(--light-background);
+  color: var(--dark);
+}
+body.light a {
+  color: var(--light);
+}
+
+.axisTitle {
+  position: absolute;
+}
+.x {
+  left: 20px;
+  top: 20px;
+}
+.y {
+  right: 10px;
+  bottom: 40px;
+}
+
+.theme-button {
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: inherit;
+  display: flex;
+  flex-direction: row;
+}
+.theme-button > svg {
+  width: 30px;
+  height: 20px;
+}
+.theme-button > .moon {
+  color: var(--dark);
+}
+.theme-button > .sun {
+  color: var(--light);
+}
+
+h1 {
+  position: absolute;
+  top: 10px;
+  font-weight: 1;
+}
+
+.canvas {
+  width: 100%;
+  height: 100%;
+}
+.canvas.light > rect {
+  fill: var(--light);
+}
+.canvas.light > rect:hover {
+  fill: var(--light-hover);
+}
+.canvas.dark > rect {
+  fill: var(--dark);
+}
+.canvas.dark > rect:hover {
+  fill: var(--dark-hover);
+}
+.tooltip {
+  position: absolute;
+  left: 80px;
+}
+
+footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+footer > a {
+  text-decoration: none;
+  cursor: pointer;
+}

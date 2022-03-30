@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.17e50649.svg" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A graph of US county educational attainment built with topojson and d3."
+    />
+    <title>Educational Attainment Graph</title>
+    <script type="module" crossorigin src="/assets/us_education.eea501af.js"></script>
+    <link rel="modulepreload" href="/assets/modulepreload-polyfill.b7f2da20.js">
+    <link rel="stylesheet" href="/assets/us_education.1b65a87d.css">
+  </head>
+  <body>
+    <!-- Need three top elements to fill the body's grid row template. -->
+    <header>
+      <h1>US Educational Attainment</h1>
+    </header>
+
+    <!-- div.content surrounding the canvas in case I need to append extra elements on the svgs. -->
+    <div class="pageContent">
+      <h2>
+        Percentage of County Populations 25 or Older with a Bachelor's Degree or
+        Higher, 2010-2014
+      </h2>
+      <div class="canvasContainer">
+        <div class="tooltip"></div>
+        <svg class="canvas"></svg>
+      </div>
+      <p class="notes">
+        <span class="color-toggle">
+          <strong>Click</strong> to toggle colors.
+        </span>
+        <span class="legend-tip">
+          Legend rect controls:<br />
+          <strong>click</strong>
+          to toggle highlight,
+          <br />
+          <strong>shift</strong>
+          +
+          <strong>click</strong>
+          to toggle fade,
+          <br />
+          <strong>ctrl</strong>
+          +
+          <strong>shift</strong>
+          +
+          <strong>click</strong>
+          to fade all except current.
+        </span>
+      </p>
+    </div>
+
+    <footer>
+      Globals d3 and topojson. Data and concept by
+      <a
+        target="_blank"
+        href="https://www.freecodecamp.org/learn/data-visualization/data-visualization-projects/visualize-data-with-a-choropleth-map"
+        rel="noreferrer"
+        >fCC</a
+      >.
+      <a
+        target="_blank"
+        href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/counties.json"
+        rel="noreferrer"
+        >County data</a
+      >.
+      <a
+        target="_blank"
+        href="https://cdn.freecodecamp.org/testable-projects-fcc/data/choropleth_map/for_user_education.json"
+        rel="noreferrer"
+        >Education data</a
+      >.
+    </footer>
+
+    <script src="https://unpkg.com/topojson@3"></script>
+    
+  </body>
+</html>

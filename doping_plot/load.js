@@ -91,7 +91,8 @@ async function load() {
       .on('click', event => {
         const dopingCategory = document.querySelector('.doping'),
           noDopingCategory = document.querySelector('.no-doping')
-        if (event.path.includes(dopingCategory)) {
+
+        if (dopingCategory.contains(event.target)) {
           dopingCategory.classList.toggle('inactive')
           document
             .querySelectorAll('.red')
@@ -121,7 +122,7 @@ async function load() {
     // Tooltip.
     const tooltip = document.querySelector('.tooltip')
     let tooltipWidth, tooltipHeight, hideTooltip
-    
+
     circles.on('mouseover', event => {
       clearTimeout(hideTooltip)
       tooltip.classList.remove('hide')
